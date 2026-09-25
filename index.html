@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jason Knight (binary-knight)</title>
+<meta name="description" content="Jason Knight builds AI systems that have to show their work: model councils that argue on the record, probes that measure what an agent can reach, and a world of autonomous characters.">
+<meta property="og:title" content="Jason Knight (binary-knight)">
+<meta property="og:description" content="AI systems that have to show their work. Open source.">
+<meta property="og:image" content="https://binary-knight.com/assets/overrule.png">
+<meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1628" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/knight.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/Archivo-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/SourceSerif4-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#work">Skip to the work</a>
+
+<header class="hero">
+  <div class="hero-text">
+    <p class="handle"><a href="https://github.com/binary-knight">binary-knight</a></p>
+    <h1>Jason<br>Knight</h1>
+    <p class="thesis">I build AI systems that have to show their work.</p>
+    <p class="lede">Councils of models that argue on the record, probes that measure what an agent can actually reach, and a world of autonomous characters that keeps living when nobody is watching. Everything below is open source.</p>
+    <p class="elsewhere"><a href="https://github.com/binary-knight">GitHub</a><a href="https://www.linkedin.com/in/jasonknight01/">LinkedIn</a></p>
+  </div>
+  <figure class="board" aria-label="An eight by eight board. Each row is a letter of b-knight written in binary, and a knight crosses it in five moves.">
+    <svg viewBox="0 0 80 80" role="img" aria-hidden="true">
+      <g id="cells"></g>
+      <polyline id="path" points="" fill="none"/>
+      <g id="stops"></g>
+      <path id="knight" d="M2.2 9.2H8V8.3H7.2C7.3 6.8 7.9 5.6 7.8 4.3C7.7 2.6 6.5 1.3 4.8 1.2L4.5 0.6L3.9 1.5C3.2 1.8 2.6 2.4 2.2 3.1L1.2 4.6C1 5 1.2 5.5 1.7 5.5L2.6 5.3L3.4 4.6L4 5.1C3.2 6.1 2.7 7.1 2.8 8.3H2.2Z"/>
+    </svg>
+    <figcaption>Each row is a letter of <em>b-knight</em> in binary.</figcaption>
+  </figure>
+</header>
+
+<main id="work">
+  <article class="project" id="overrule">
+    <header>
+      <h2><a href="https://github.com/binary-knight/overrule">Overrule</a></h2>
+      <p class="what">A council of AI models that argue under rules of order and return a verdict with the reasoning on the record.</p>
+    </header>
+    <div class="body">
+      <p>Most multi-model tools average their answers. Overrule makes the models argue: each quotes the exact claim it answers, raises objections with the condition that would resolve them, and may change its mind only by citing what changed it. A drafter writes a candidate and the others vote on that exact text, with every dissent kept verbatim.</p>
+      <p>Pointed at a repository, the drafter's change becomes a commit in an isolated checkout. The app runs the checks on that commit and voters judge the diff and the output, not a summary of it. Every sandbox level is measured on the host before it is offered. Other agents call it from the command line, and the exit status says whether the council settled the question or ran out of turns.</p>
+    </div>
+    <figure class="evidence shot">
+      <img src="assets/overrule.png" width="1360" height="900" loading="lazy" alt="A finished Overrule meeting: the verdict Approved, the votes, the unresolved objections, and the quotations each member relied on, with a link to the entry each one came from.">
+      <figcaption>A finished meeting. The verdict, the votes, and every quotation a member relied on, linked to where it was said.</figcaption>
+    </figure>
+    <p class="facts">Node.js, no runtime dependencies. Apache 2.0.</p>
+  </article>
+
+  <article class="project" id="agentsec">
+    <header>
+      <h2><a href="https://github.com/binary-knight/agentsec-pack">agentsec-pack</a></h2>
+      <p class="what">Adversarial tests that measure what an AI agent can reach from inside its sandbox.</p>
+    </header>
+    <div class="body">
+      <p>A transcript cannot tell you what an agent could have done. This probe runs inside the environment you actually deploy and scores what it can touch: the network, secrets, the host filesystem, privileges, other processes. The loop is measure, harden, measure again, and a budget turns the score into a gate that fails the build when a sandbox drifts looser.</p>
+    </div>
+    <figure class="evidence measure" aria-label="Blast radius scores for a stock Python container.">
+      <ol class="scores">
+        <li><span class="score" style="--s:59">59</span><span class="label">A stock <code>python:3.12-slim</code> container, as most people run it.</span></li>
+        <li><span class="score" style="--s:15">15</span><span class="label">After the hardening flags the report recommends.</span></li>
+        <li><span class="score" style="--s:0">0</span><span class="label">With the network cut, and an agent that cannot reach its model does not work. Zero is not the target.</span></li>
+      </ol>
+      <figcaption>The advice is to aim for the lowest score the workload survives, and to record why each remaining finding is still open.</figcaption>
+    </figure>
+    <p class="facts">Python. Overrule uses it to measure its own sandboxes before offering them.</p>
+  </article>
+
+  <article class="project" id="usurper">
+    <header>
+      <h2><a href="https://github.com/binary-knight/usurper-reborn">Usurper Reborn</a></h2>
+      <p class="what">A persistent text RPG where more than 130 autonomous characters live their lives around the clock.</p>
+    </header>
+    <div class="body">
+      <p>Every character is a goal-driven agent with thirteen personality traits and a memory weighted by importance. They take jobs, form gangs, fall in love, marry, and raise children who grow up into new adults, and they age and die whether or not anyone is logged in. Log back in and the news feed tells you what happened while you were away.</p>
+      <p>Players share one world through the browser, over SSH, or from any MUD client, with the realm's gossip channel bridged to Discord. Beneath the simulation is a hundred-floor dungeon, seven corrupted gods, and five endings. It began as a tribute to the 1993 door game it is named after.</p>
+    </div>
+    <p class="evidence play"><a href="https://usurper-reborn.net">Play in the browser</a><a href="https://store.steampowered.com/app/4336570/Usurper_Reborn/">On Steam</a></p>
+    <p class="facts">C#, SQLite. GPL v2.</p>
+  </article>
+
+  <article class="project" id="logwhisperer">
+    <header>
+      <h2><a href="https://github.com/binary-knight/logwhisperer">LogWhisperer</a></h2>
+      <p class="what">Plain-language summaries of Linux server logs, written by a model that runs on the same machine.</p>
+    </header>
+    <div class="body">
+      <p>It reads the journal, log files, and Docker containers, summarizes what matters through a local model with Ollama so no log leaves the server, and sends alerts to Discord with deduplication and rate limiting so a noisy night produces one message rather than a thousand.</p>
+    </div>
+    <p class="facts">Python. MIT.</p>
+  </article>
+
+  <section class="also">
+    <p>I also author benchmark tasks for autonomous coding agents: problems built so that a wrong solution cannot pass and a correct one cannot be faked. That work is private by design.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Jason Knight. <a href="https://github.com/binary-knight">github.com/binary-knight</a> and <a href="https://www.linkedin.com/in/jasonknight01/">LinkedIn</a>.</p>
+</footer>
+
+<script src="board.js" defer></script>
+</body>
+</html>
