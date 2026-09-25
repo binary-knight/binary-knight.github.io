@@ -98,6 +98,8 @@ h2 a:hover { text-decoration: underline; }
 .score::after { content: ""; position: absolute; left: 0; bottom: -3px; height: 3px; width: calc(var(--s) * 1%); background: var(--accent); }
 .scores .label { padding-top: 0.35rem; color: var(--ink-2); }
 
+/* A tall, narrow panel reads better at its own width than stretched across the column. */
+.living img { max-width: 30rem; }
 .play { display: flex; flex-wrap: wrap; gap: 1.5rem; font: 700 1rem/1 var(--display); font-stretch: 112%; }
 
 .also { max-width: 72rem; padding: clamp(2.25rem, 5vw, 3.5rem) 0; border-bottom: 1px solid var(--rule); }

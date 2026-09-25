@@ -63,13 +63,9 @@
     <div class="body">
       <p>A transcript cannot tell you what an agent could have done. This probe runs inside the environment you actually deploy and scores what it can touch: the network, secrets, the host filesystem, privileges, other processes. The loop is measure, harden, measure again, and a budget turns the score into a gate that fails the build when a sandbox drifts looser.</p>
     </div>
-    <figure class="evidence measure" aria-label="Blast radius scores for a stock Python container.">
-      <ol class="scores">
-        <li><span class="score" style="--s:59">59</span><span class="label">A stock <code>python:3.12-slim</code> container, as most people run it.</span></li>
-        <li><span class="score" style="--s:15">15</span><span class="label">After the hardening flags the report recommends.</span></li>
-        <li><span class="score" style="--s:0">0</span><span class="label">With the network cut, and an agent that cannot reach its model does not work. Zero is not the target.</span></li>
-      </ol>
-      <figcaption>The advice is to aim for the lowest score the workload survives, and to record why each remaining finding is still open.</figcaption>
+    <figure class="evidence shot">
+      <img src="assets/agentsec-report.png" width="2176" height="1222" loading="lazy" alt="agentsec's report for a stock python:3.12-slim container: a blast radius of 59 out of 100, with privilege, network and the filesystem reachable from inside, secrets held, processes sealed, and seven findings listed worst first.">
+      <figcaption>agentsec's own report on a stock <code>python:3.12-slim</code> container: 59 of 100, seven findings. The hardening flags it recommends bring the same image to 15. Cutting the network reaches 0, but an agent that cannot reach its model does not work, so zero is not the target.</figcaption>
     </figure>
     <p class="facts">Python. Overrule uses it to measure its own sandboxes before offering them.</p>
   </article>
@@ -83,6 +79,10 @@
       <p>Every character is a goal-driven agent with thirteen personality traits and a memory weighted by importance. They take jobs, form gangs, fall in love, marry, and raise children who grow up into new adults, and they age and die whether or not anyone is logged in. Log back in and the news feed tells you what happened while you were away.</p>
       <p>Players share one world through the browser, over SSH, or from any MUD client, with the realm's gossip channel bridged to Discord. Beneath the simulation is a hundred-floor dungeon, seven corrupted gods, and five endings. It began as a tribute to the 1993 door game it is named after.</p>
     </div>
+    <figure class="evidence shot living">
+      <img src="assets/usurper-living.png" width="904" height="956" loading="lazy" alt="The live feed on usurper-reborn.net: characters levelling up, joining and abandoning factions, a faction disbanding, a wedding, and gossip spreading through the gym, all within the same minute.">
+      <figcaption>The game's own live feed of what its characters are doing, as it stood when this page was written: factions gained and abandoned, a wedding, a rumour spreading through the gym.</figcaption>
+    </figure>
     <p class="evidence play"><a href="https://usurper-reborn.net">Play in the browser</a><a href="https://store.steampowered.com/app/4336570/Usurper_Reborn/">On Steam</a></p>
     <p class="facts">C#, SQLite. GPL v2.</p>
   </article>
