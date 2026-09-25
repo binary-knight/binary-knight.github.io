@@ -1,9 +1,9 @@
 # binary-knight.com
 
-The personal site of Jason Knight. Static HTML, CSS and one small script, with the fonts hosted here so a visitor makes no request to any third party. No build step: edit `index.html` and push.
+The personal site of Jason Knight. One static HTML page styled after a BBS main menu, with its stylesheet and a few lines of script inline, and JetBrains Mono hosted here so a visitor makes no request to any third party. No build step: edit `index.html` and push.
 
-- `index.html` holds the content, every claim of which comes from the public README of the project it describes.
-- `style.css` is the whole design: ink navy on a cool white, one oxblood accent, a navy dark mode that follows the visitor's system setting.
-- `board.js` draws the board in the header. Each row is a letter of "b-knight" in binary, and the knight crosses it in five legal moves. It animates once, and not at all when the visitor prefers reduced motion.
+- Every claim on the page comes from the public README of the project it describes.
+- The board in the header spells "b-knight" in binary, one letter per row, and a knight crosses it in five legal moves. It is plain SVG and draws once, or not at all when the visitor prefers reduced motion.
+- The number keys jump to projects and P, A, C to sections. Without JavaScript the menu links do the same.
 
-Served by GitHub Pages at the domain in `CNAME`.
+JetBrains Mono is under the SIL Open Font License, included in `assets/fonts`. Served by GitHub Pages at the domain in `CNAME`.
