@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jason Knight: open-source AI agent tools and benchmarks</title>
+<title>Jason Knight: open-source tools for AI agents</title>
 <meta name="description" content="Jason Knight builds AI systems that have to show their work: Overrule, a council of AI models that argue on the record; agentsec-pack, sandbox tests for AI agents; and Usurper Reborn.">
 <meta name="author" content="Jason Knight">
 <link rel="canonical" href="https://binary-knight.com/">
@@ -20,7 +20,7 @@
 <meta property="profile:last_name" content="Knight">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Jason Knight","alternateName":"binary-knight","url":"https://binary-knight.com/","image":"https://binary-knight.com/assets/overrule.png","description":"Builds open-source AI tools and designs benchmark tasks for autonomous coding agents.","sameAs":["https://github.com/binary-knight","https://www.linkedin.com/in/jasonknight01/"],"knowsAbout":["AI agents","Large language models","AI evaluation","Agent sandboxing"]}
+{"@context":"https://schema.org","@type":"Person","name":"Jason Knight","alternateName":"binary-knight","url":"https://binary-knight.com/","image":"https://binary-knight.com/assets/overrule.png","description":"Builds open-source tools for AI agents: model councils, sandbox measurement, and autonomous characters.","sameAs":["https://github.com/binary-knight","https://www.linkedin.com/in/jasonknight01/"],"knowsAbout":["AI agents","Large language models","Multi-agent systems","Agent sandboxing"]}
 </script>
 <meta name="theme-color" content="#020204">
 <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
@@ -78,8 +78,6 @@ main{display:flex;flex-direction:column;gap:clamp(40px,6vw,72px)}
 .evidence img.tall{max-width:460px}
 .solo{grid-template-columns:minmax(0,1fr)}
 .solo .text{max-width:72ch}
-.sealed .text{border:1px dashed #6a5828;border-radius:3px;padding:20px 22px;max-width:72ch}
-.sealed h2{color:#b0a898}
 .scores{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
 .scores li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:4px 16px;align-items:center}
 .scores .n{grid-row:span 2;color:#e0d8c8;font-size:28px;font-weight:800;line-height:1}
@@ -123,13 +121,12 @@ footer{font-size:12px;display:flex;flex-wrap:wrap;justify-content:space-between;
       <li><a href="#agentsec"><span class="key">[2]</span><span class="item"><span class="name">agentsec-pack</span><span class="stack">Python</span></span></a></li>
       <li><a href="#usurper"><span class="key">[3]</span><span class="item"><span class="name">Usurper Reborn</span><span class="stack">C#, SQLite, GPL v2</span></span></a></li>
       <li><a href="#logwhisperer"><span class="key">[4]</span><span class="item"><span class="name">LogWhisperer</span><span class="stack">Python, MIT</span></span></a></li>
-      <li><a href="#benchmarks"><span class="key">[5]</span><span class="item"><span class="name">Benchmark tasks</span><span class="stack">Private</span></span></a></li>
       </ol>
-      <p class="prompt">Selection (1-5):<span class="cursor" aria-hidden="true"></span></p>
+      <p class="prompt">Selection (1-4):<span class="cursor" aria-hidden="true"></span></p>
     </nav>
 
     <section class="project" id="overrule">
-      <header><span class="key">[1]</span><h2>Overrule</h2><span class="file">File 01 of 05</span></header>
+      <header><span class="key">[1]</span><h2>Overrule</h2><span class="file">File 01 of 04</span></header>
       <div class="text">
         <p class="what">A council of AI models that argue under rules of order and return a verdict with the reasoning on the record.</p>
         <p>Most multi-model tools average their answers. Overrule makes the models argue: each quotes the exact claim it answers, raises objections with the condition that would resolve them, and may change its mind only by citing what changed it. A drafter writes a candidate and the others vote on that exact text, with every dissent kept verbatim.</p>
@@ -140,7 +137,7 @@ footer{font-size:12px;display:flex;flex-wrap:wrap;justify-content:space-between;
       <div class="evidence"><img src="assets/overrule.png" width="1360" height="900" alt="A finished Overrule meeting" loading="eager"></div>
     </section>
     <section class="project" id="agentsec">
-      <header><span class="key">[2]</span><h2>agentsec-pack</h2><span class="file">File 02 of 05</span></header>
+      <header><span class="key">[2]</span><h2>agentsec-pack</h2><span class="file">File 02 of 04</span></header>
       <div class="text">
         <p class="what">Adversarial tests that measure what an AI agent can reach from inside its sandbox.</p>
         <p>A transcript cannot tell you what an agent could have done. This probe runs inside the environment you actually deploy and scores what it can touch: the network, secrets, the host filesystem, privileges, other processes. The loop is measure, harden, measure again, and a budget turns the score into a gate that fails the build when a sandbox drifts looser.</p>
@@ -150,7 +147,7 @@ footer{font-size:12px;display:flex;flex-wrap:wrap;justify-content:space-between;
       <div class="evidence"><img src="assets/agentsec-report.png" width="2176" height="1222" alt="An agentsec-pack report for a stock container: 59 of 100, findings listed worst first" loading="lazy"><ol class="scores" aria-label="agentsec-pack scores, 0 to 100, lower is safer"><li><span class="n">15</span><span class="bar"><span style="width:15%"></span></span><span class="l">After the hardening flags the report recommends.</span></li><li><span class="n">0</span><span class="bar"><span style="width:0%"></span></span><span class="l">With the network cut, and an agent that cannot reach its model does not work. Zero is not the target.</span></li></ol></div>
     </section>
     <section class="project" id="usurper">
-      <header><span class="key">[3]</span><h2>Usurper Reborn</h2><span class="file">File 03 of 05</span></header>
+      <header><span class="key">[3]</span><h2>Usurper Reborn</h2><span class="file">File 03 of 04</span></header>
       <div class="text">
         <p class="what">A persistent text RPG where more than 130 autonomous characters live their lives around the clock.</p>
         <p>Every character is a goal-driven agent with thirteen personality traits and a memory weighted by importance. They take jobs, form gangs, fall in love, marry, and raise children who grow up into new adults, and they age and die whether or not anyone is logged in. Log back in and the news feed tells you what happened while you were away.</p>
@@ -161,7 +158,7 @@ footer{font-size:12px;display:flex;flex-wrap:wrap;justify-content:space-between;
       <div class="evidence"><img src="assets/usurper-living.png" width="904" height="956" alt="The Living World feed: NPCs levelling up, joining teams and getting married while players are away" loading="lazy" class="tall"><dl class="stats"><div><dt>130+</dt><dd>autonomous characters</dd></div><div><dt>13</dt><dd>personality traits</dd></div><div><dt>100</dt><dd>dungeon floors</dd></div><div><dt>7</dt><dd>corrupted gods</dd></div><div><dt>5</dt><dd>endings</dd></div></dl></div>
     </section>
     <section class="project solo" id="logwhisperer">
-      <header><span class="key">[4]</span><h2>LogWhisperer</h2><span class="file">File 04 of 05</span></header>
+      <header><span class="key">[4]</span><h2>LogWhisperer</h2><span class="file">File 04 of 04</span></header>
       <div class="text">
         <p class="what">Plain-language summaries of Linux server logs, written by a model that runs on the same machine.</p>
         <p>It reads the journal, log files, and Docker containers, summarizes what matters through a local model with Ollama so no log leaves the server, and sends alerts to Discord with deduplication and rate limiting so a noisy night produces one message rather than a thousand.</p>
@@ -169,18 +166,11 @@ footer{font-size:12px;display:flex;flex-wrap:wrap;justify-content:space-between;
         <p class="links"><a href="https://github.com/binary-knight/logwhisperer">Source on GitHub</a></p>
       </div>
     </section>
-    <section class="project sealed solo" id="benchmarks">
-      <header><span class="key">[5]</span><h2>Benchmark tasks</h2><span class="file">File 05 of 05</span></header>
-      <div class="text">
-        <p class="what">Benchmark tasks for autonomous coding agents.</p>
-        <p>I also author benchmark tasks for autonomous coding agents: problems built so that a wrong solution cannot pass and a correct one cannot be faked. That work is private by design.</p>
-      </div>
-    </section>
 
     <section class="about" id="about">
       <h2>[A] About</h2>
       <div>
-        <p class="lead">Councils of models that argue on the record, probes that measure what an agent can actually reach, and a world of autonomous characters that keeps living when nobody is watching. Everything here is open source, apart from the benchmark work.</p>
+        <p class="lead">Councils of models that argue on the record, probes that measure what an agent can actually reach, and a world of autonomous characters that keeps living when nobody is watching. Everything here is open source.</p>
       </div>
     </section>
 
@@ -193,10 +183,10 @@ footer{font-size:12px;display:flex;flex-wrap:wrap;justify-content:space-between;
     </section>
   </main>
 
-  <footer><span>Jason Knight, 2026</span><span>Keys: 1-5 projects, P A C sections, G GitHub</span></footer>
+  <footer><span>Jason Knight, 2026</span><span>Keys: 1-4 projects, P A C sections, G GitHub</span></footer>
 </div>
 <script>
-(function(){var ids={1:"overrule",2:"agentsec",3:"usurper",4:"logwhisperer",5:"benchmarks",p:"projects",a:"about",c:"contact"};
+(function(){var ids={1:"overrule",2:"agentsec",3:"usurper",4:"logwhisperer",p:"projects",a:"about",c:"contact"};
 document.addEventListener("keydown",function(e){if(e.metaKey||e.ctrlKey||e.altKey||/input|textarea|select/i.test(e.target.tagName))return;var k=e.key.toLowerCase();
 if(k==="g"){location.href="https://github.com/binary-knight";return}
 var id=ids[k];if(!id)return;var el=document.getElementById(id);if(!el)return;e.preventDefault();window.scrollTo(0,el.getBoundingClientRect().top+window.pageYOffset-24);history.replaceState(null,"","#"+id);});})();
