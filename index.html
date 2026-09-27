@@ -74,7 +74,9 @@ main{display:flex;flex-direction:column;gap:clamp(40px,6vw,72px)}
 .facts{font-size:13px;padding-top:12px;border-top:1px solid rgba(140,100,40,.18)}
 .links{display:flex;flex-wrap:wrap;gap:8px 24px;font-weight:700;font-size:14px}
 .evidence{display:flex;flex-direction:column;gap:20px}
-.evidence img{border:1px solid #8a7030;border-radius:3px}
+.evidence img,.evidence video{border:1px solid #8a7030;border-radius:3px}
+.evidence video{display:block;width:100%;height:auto;background:#020204}
+.caption{font-size:13px;line-height:1.5;margin-top:-10px}
 .evidence img.tall{max-width:460px}
 .solo{grid-template-columns:minmax(0,1fr)}
 .solo .text{max-width:72ch}
@@ -134,7 +136,7 @@ footer{font-size:12px;display:flex;flex-wrap:wrap;justify-content:space-between;
         <p class="facts">Node.js, no runtime dependencies. Apache 2.0.</p>
         <p class="links"><a href="https://github.com/binary-knight/overrule">Source on GitHub</a></p>
       </div>
-      <div class="evidence"><img src="assets/overrule.png" width="1360" height="900" alt="A finished Overrule meeting" loading="eager"></div>
+      <div class="evidence"><video controls muted playsinline preload="none" poster="assets/overrule-meeting.jpg" width="1280" height="800" aria-label="A real Overrule meeting, sped up: three models from two providers debate SQLite against Postgres and vote on a final answer"><source src="assets/overrule-meeting.webm" type="video/webm"><a href="assets/overrule-meeting.webm">Watch the meeting</a></video><p class="caption">A real meeting, seven minutes sped up to about thirty seconds. GPT-5.6 and two Claude models argue SQLite against Postgres for a side project, concede points, object, and vote on the final answer.</p></div>
     </section>
     <section class="project" id="agentsec">
       <header><span class="key">[2]</span><h2>agentsec-pack</h2><span class="file">File 02 of 04</span></header>
