@@ -7,3 +7,5 @@ The personal site of Jason Knight. One static HTML page styled after a BBS main 
 - The number keys jump to projects and P, A, C to sections. Without JavaScript the menu links do the same.
 
 JetBrains Mono is under the SIL Open Font License, included in `assets/fonts`. Served by GitHub Pages at the domain in `CNAME`.
+
+Visits are counted by GoatCounter, which sets no cookies. Its script is hosted here as `assets/count.js` (ISC license), so the only outside request is the count itself, sent to `binary-knight.goatcounter.com`. Visits from localhost are not counted.
